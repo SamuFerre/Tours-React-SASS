@@ -1,0 +1,66 @@
+@use '../Globals/variables' as v;
+@use '../Globals/mixins' as m;
+// KeyFrames 
+@keyframes moveInLeft {
+    0%{
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    80%{
+        transform: translateX(10px);
+
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes moveInRight {
+    0%{
+        opacity: 0;
+        transform: translateX(10rem);
+    }
+    80%{
+        transform: translateX(-1rem);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+//Code
+
+.heading-primary {
+    color: v.$color-white;
+    text-transform: uppercase;
+
+    backface-visibility: hidden;
+    margin-bottom: 6rem;
+
+    &--main{
+        display: block;
+        font-size: 6rem;
+        font-weight: 400;
+        letter-spacing: 3.5rem;
+        animation: moveInLeft 1s ease-out; 
+
+        @include m.respond(phone) {
+            letter-spacing: 1rem;
+            font-size: 5rem;
+        }
+    }
+    &--sub{
+        display: block;
+        font-size: 2rem;
+        font-weight: 700;
+        letter-spacing: 1.7rem;
+        animation: moveInRight 1s ease-out; 
+
+        @include m.respond(phone) {
+            letter-spacing: .5rem;
+        }
+    }
+}
+

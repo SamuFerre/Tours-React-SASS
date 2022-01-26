@@ -1,0 +1,25 @@
+@use '../Globals/mixins' as m;
+.u-center-text {
+    text-align: center !important;
+}
+.u-margin-bottom-b {
+    margin-bottom: 8rem !important;
+    @include m.respond(tab-port) {
+        margin-bottom: 5rem;
+    }
+}
+.u-margin-bottom-m {
+    margin-bottom: 4rem !important;
+    @include m.respond(tab-port) {
+        margin-bottom: 3rem !important;
+    }
+}
+.u-margin-bottom-s {
+    margin-bottom: 1.5rem !important;
+}
+.u-margin-top {
+    margin-top: 5rem !important;
+    @include m.respond(tab-port) {
+        margin-top: 3rem !important;
+    }
+}

@@ -1,0 +1,36 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+html {
+    font-size: 62.5%; //1rem = 10px; 10/16 == 65.5%
+    box-sizing: border-box;
+
+    @include m.respond(tab-land) {
+      font-size: 56.25%; //1rem = 9px, 9/16 = 56.25%
+    }
+    @include m.respond(tab-port) {
+      font-size: 50%; //1rem = 8px,  8/16 = 50%
+    }
+    @include m.respond(big-desktop) {
+      font-size: 75%; //1rem = 12px, 12/16 = 75%
+    }
+
+}
+
+*, *:before, *:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+  
+body {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    /* font-size: 16px; */
+    line-height: 1.7;
+    color: v.$color-grey;
+    padding: 3rem;
+
+    @include m.respond(tab-port) {
+        padding: 0;
+    }
+}
