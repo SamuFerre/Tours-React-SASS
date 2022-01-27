@@ -11,7 +11,7 @@ const Paragraph = () => {
             <TitleH3 title="Live adventure like you have never before"/>
             <p className="paragraph">
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut adipisci id ut, hic architecto nam. Aut adipisci id ut, hic architecto nam.
-            </p>
+            </p> 
             <a className="btn-text" href="/home">Learn more &rarr;</a>
             </Columns>
     );

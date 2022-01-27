@@ -44,10 +44,11 @@ const TOURS = [
     },
 ];
 
-const Tours = () => {
+const Tours = props => {
+    
     return (
         <section className="section-tours" id='section-tours'>
-            <TitleH2 title="Most popular tours"/>
+            <TitleH2 divClass="u-center-text u-margin-bottom-b" title="Most popular tours"/>
 
             <RowSection>
                 {TOURS.map((tour) => (
@@ -63,10 +64,11 @@ const Tours = () => {
                         difficulty={tour.difficulty}
                         card={tour.card}    
                         price={tour.price}
+                        onShow={props.onShowPopup}
                 />))}
             </RowSection>
             <div className='u-center-text'>
-                <a href="/" className='btn btn--green u-margin-top'>Discover all tours</a>
+                <a href="/" className='btn btn--green u-margin-top'>Discover all tours</a> 
             </div>
         </section>
     )

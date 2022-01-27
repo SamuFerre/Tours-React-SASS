@@ -33,7 +33,7 @@ const Testimonials = () => {
                     Your browser is not supported!
                 </video>
             </div>
-            <TitleH2 title="We make people genuinely happy" />
+            <TitleH2 divClass="u-center-text u-margin-bottom-b" title="We make people genuinely happy" />
 
             <RowSection>
                 {TESTIMONIAL.map((testimonial) => (
@@ -46,7 +46,7 @@ const Testimonials = () => {
                 />))}
             </RowSection>
             <div className='u-center-text'>
-                <a href='/' className='btn-text'>Read All Stories &rarr;</a>
+                <a href='/' className='btn-text'>Read All Stories &rarr;</a> 
             </div>
         </section>
 

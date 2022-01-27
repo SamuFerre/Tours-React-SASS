@@ -1,4 +1,6 @@
+import Button from "../UI/Button";
 const Back = props => {
+    
     return (
         <div className={props.card}>
             <div className="tour-card__cta">
@@ -7,7 +9,7 @@ const Back = props => {
                     <p className="tour-card__price-value">{props.price}</p>
                 </div>
                 {/* Hi haura que canviar es link the book now */}
-                <a href="#popup" className="btn btn--white">Book now!</a>
+                <Button type="button" classes="btn btn--white" onClick={props.onClick}>Book now!</Button> 
             </div>
         </div>
     );

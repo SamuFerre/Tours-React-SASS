@@ -15,6 +15,7 @@
 //Code
 
 .btn {
+    min-width: 18rem;
     &,
     &:link,
     &:visited {
@@ -64,6 +65,15 @@
 
         &::after {
             background-color: v.$color-primary;
+        }
+    }
+    &--yellow {
+        background-color: v.$color-secondary-light;
+        color: v.$color-white;
+        margin-left: 2rem;
+
+        &::after {
+            background-color: v.$color-secondary-light;
         }
     }
     

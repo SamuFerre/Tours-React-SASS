@@ -7,7 +7,7 @@ const About = () => {
     return (
         <main>
             <section className="section-about">
-                <TitleH2 title="Exiting tours for adventurous people" />
+                <TitleH2 divClass="u-center-text u-margin-bottom-b" title="Exiting tours for adventurous people" />
                 <RowSection>
                     <Paragraph/>
                     <Composition/>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import About from './components/About/About';
 import SectionFeatures from './components/Features/Section-Features';
 import Header from './components/Header/Header';
@@ -10,17 +10,32 @@ import Navigation from './components/Navigation/Navigation';
 import Popup from './components/UI/Popup';
 
 function App() {
+  const [popupIsShown, setPopupIsShown] = useState(false);
+
+
+  const showPopupHandler = () => {
+    setTimeout(() => {
+      setPopupIsShown(true);
+    }, 250);
+    
+  }
+
+  const hidePopupHandler = () => {
+    setPopupIsShown(false);
+  };
+
+
   return (
     <React.Fragment>
       <Navigation/>
       <Header/>
       <About/>
       <SectionFeatures/>
-      <Tours/>
+      <Tours onShowPopup={showPopupHandler}/>
       <Testimonials/>
       <BookSection/>
       <Footer/>
-      <Popup/>
+      {popupIsShown && <Popup onClose={hidePopupHandler}/>}
     </React.Fragment>
   )
 }

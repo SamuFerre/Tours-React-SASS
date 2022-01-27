@@ -45,6 +45,7 @@ export const TOURS = [
 ];
 
 const TourCard = props => {
+    
     return(
         <Columns classes="col-1-of-3">
             <div className="tour-card">
@@ -62,6 +63,7 @@ const TourCard = props => {
                 <Back
                     card={props.card}    
                     price={props.price}
+                    onClick={props.onShow}
                 />
             </div>
         </Columns>

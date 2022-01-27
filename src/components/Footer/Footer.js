@@ -40,7 +40,7 @@ const Footer = () => {
                                 <a className='footer__link' href='/'>Terms</a>
                             </li>
                         </ul>
-                    </div>
+                    </div> 
                 </Columns>
                 <Columns classes="col-1-of-2">
                     <p className='footer__copyright'>

@@ -1,9 +1,10 @@
+import Button from "../UI/Button";
+import TitleH2 from "../UI/TitleH2";
+
 const Form = () => {
     return (
         <form className="form">
-            <div className="u-margin-bottom-m">
-                <h2 className="heading-secondary">Start booking now</h2>
-            </div>
+            <TitleH2 title="Start booking now" divClass="u-margin-bottom-m" />
             <div className="form__group">
                 <input id="fullName" type="text" className="form__input" placeholder="Full Name" required />
                 <label className="form__label" htmlFor="fullName">Full Name</label>
@@ -29,7 +30,7 @@ const Form = () => {
                 </div>
             </div>
             <div className="form-group">
-                <button className="btn btn--green">Next Step &rarr;</button>
+                <Button type="submit" classes="btn btn--green">Send &rarr;</Button>
             </div>
         </form>
     )
